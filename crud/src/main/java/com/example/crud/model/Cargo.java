@@ -1,19 +1,19 @@
-package com.example.crud.Models;
+package com.example.crud.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.io.Serializable;
-
+import java.math.BigDecimal;
+@Entity
 @Data
 @Table
-@Entity
-public class Rol implements Serializable {
+public class Cargo {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long idRol;
+    private Long id;
     @Column(nullable = false)
     private String nombre;
+    @Column(nullable = false)
+    private BigDecimal sueldo;
 
-    private String Descripcion;
 }

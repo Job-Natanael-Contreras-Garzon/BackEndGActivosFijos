@@ -1,17 +1,16 @@
-package com.example.crud.Models;
+package com.example.crud.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.io.Serializable;
-
+@Entity
 @Data
 @Table
-@Entity
-public class Permisos implements Serializable {
+public class Departamento {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long idPermiso;
+    private Long id;
     @Column(nullable = false)
     private String nombre;
+    private String descripcion;
 }
